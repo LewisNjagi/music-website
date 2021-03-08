@@ -1,0 +1,21 @@
+.image {
+    width: 100%;
+}
+.head {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Arvo', serif;
+}
+.text {
+    font-size: 24px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+.navbar-custom { 
+    background-color: #a8acd2 !important; 
+}
+.navbar-nav a {
+    color: black;
+}
+.pom li {
+    line-height: 40px;
+}
