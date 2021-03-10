@@ -1,6 +1,5 @@
 from flask import render_template
 from . import main
-from ..time import countdown
 
 # Views
 @main.route('/')
