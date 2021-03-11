@@ -9,8 +9,8 @@
         <path
             d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
     </svg>
-    <a class="navbar-brand" href="#" style="margin-left: 20px; color: inherit; font-size: 35px; font-family: 'Exo 2', sans-serif;">VIS
-        PLAY</a>
+    <a class="navbar-brand" href="#"
+        style="margin-left: 20px; color: inherit; font-size: 35px; font-family: 'Exo 2', sans-serif;">VISPLAY</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,16 +27,31 @@
             <i class="fas fa-search"></i>
         </button>
     </div> -->
-    <form class="form-inline" style="margin-left: 230px; margin-top: 20px;">
+    <!-- <form class="form-inline" style="margin-left: 230px; margin-top: 20px;">
         <div class="form-outline mx-sm-3 mb-2">
             <label for="form1" class="form-label"></label>
             <input type="search" class="form-control" placeholder="Search">
-        </div>
-        <!-- <button type="submit" class="btn btn-dark mb-2">Search</button> -->
-    </form>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ">
-            <!-- <li><a href="#" style="color: inherit; text-decoration: none; font-family: 'Exo 2', sans-serif;">Sign in</a></li> -->
-        </ul>
-    </div>
+        </div> -->
+    <!-- <button type="submit" class="btn btn-dark mb-2">Search</button> -->
+    <!-- </form> -->
+    <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+    <!-- <ul class="navbar-nav "> -->
+    <!-- <li><a href="#" style="color: inherit; text-decoration: none; font-family: 'Exo 2', sans-serif;">Sign in</a></li> -->
+    <!-- </ul> -->
+    <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+        <a href="/about_me" style="text-decoration: none;">
+            <li style="color:black;padding:15px; font-family: 'B612', sans-serif;">Welcome {{current_user.username}}
+            </li>
+        </a>
+        <a href="{{url_for('auth.logout')}}"><button
+                style="background: none; font-family: 'B612', sans-serif; font-size: 13px; margin-top: 11px;"
+                type="button" class="btn btn-light">SIGN OUT</button></a>
+        {% else %}
+        <a href="{{url_for('auth.login')}}"><button
+                style="background: none; font-family: 'B612', sans-serif; font-size: 13px;" type="button"
+                class="btn btn-light">SIGN IN</button></a>
+        {%endif%}
+    </ul>
+    <!-- </div> -->
 </nav>
