@@ -3,7 +3,7 @@ from flask_login import UserMixin
 from . import db
 from . import login_manager
 
-class User(db.Model):
+class User(UserMixin,db.Model):
 
     __tablename__ = 'users'
 
@@ -27,3 +27,12 @@ class User(db.Model):
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
+
+class Track:
+    def __init__(self,id,song_art_image_thumbnail_url,image_url,name,url):
+
+        self.id = id
+        self.song_art_image_thumbnail_url = song_art_image_thumbnail_url
+        self.image_url = image_url
+        self.name = name
+        self.url = url
