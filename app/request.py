@@ -22,44 +22,44 @@ def configure_request(app):
 
 #     return print(playlist)
 
-# def get_track():
+def get_track():
 
-#     get_track_url = "https://genius.p.rapidapi.com/artists/16775/songs"
+    get_track_url = "https://genius.p.rapidapi.com/artists/16775/songs"
     
 
-#     headers = {
-#         'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
-#         'x-rapidapi-host': "genius.p.rapidapi.com"
-#         }
+    headers = {
+        'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
+        'x-rapidapi-host': "genius.p.rapidapi.com"
+        }
 
-#     track_response = requests.get(get_track_url, headers=headers).json()
+    track_response = requests.get(get_track_url, headers=headers).json()
 
-#     track_results = None
+    track_results = None
 
-#     if track_response['response']['songs']:
+    if track_response['response']['songs']:
 
-#         track_results_list = track_response['response']['songs']
-#         track_results = process_tracks(track_results_list)
+        track_results_list = track_response['response']['songs']
+        track_results = process_tracks(track_results_list)
 
       
-#         return track_results
+        return track_results
     
 
-# def process_tracks(track_list):
+def process_tracks(track_list):
 
-#     track_results = []
-#     for track_item in track_list:
-#         id = track_item.get('id')
-#         song_art_image_thumbnail_url = track_item.get('song_art_image_thumbnail_url')
-#         image_url = track_item.get('primary_artist').get('image_url')
-#         name = track_item.get('primary_artist').get('name')
-#         url = track_item.get('primary_artist').get('url')
+    track_results = []
+    for track_item in track_list:
+        id = track_item.get('id')
+        song_art_image_thumbnail_url = track_item.get('song_art_image_thumbnail_url')
+        image_url = track_item.get('primary_artist').get('image_url')
+        name = track_item.get('primary_artist').get('name')
+        url = track_item.get('primary_artist').get('url')
 
-#         if song_art_image_thumbnail_url:
-#             track_object = Track(id,song_art_image_thumbnail_url,image_url,name,url)
-#             track_results.append(track_object)
+        if song_art_image_thumbnail_url:
+            track_object = Track(id,song_art_image_thumbnail_url,image_url,name,url)
+            track_results.append(track_object)
 
-#     return track_results
+    return track_results
 
 
 
@@ -80,7 +80,21 @@ def configure_request(app):
 
 #     return search_response.json()
 
+# def playlist():
+    
+#     get_track_url = "https://genius.p.rapidapi.com/songs/100"
+    
+
+#     headers = {
+#         'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
+#         'x-rapidapi-host': "genius.p.rapidapi.com"
+#         }
+
+#     track_response = requests.get(get_track_url, headers=headers).json()
+
+#     print(track_response)
+
 
 # get_track()
-# get_playlist()
+# playlist()
 # search()

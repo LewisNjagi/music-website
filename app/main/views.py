@@ -1,6 +1,6 @@
 from flask import render_template
 from . import main
-# from ..request import get_track
+from ..request import get_track
 
 # Views
 @main.route('/')
@@ -20,6 +20,6 @@ def artists():
     '''
     View root page function that returns the index page and its data
     '''
-    # artists = get_track()
+    artists = get_track()
     # ,artists = artists,title = title
-    return render_template('artists.html')
+    return render_template('artists.html',artists = artists)
