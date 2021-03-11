@@ -3,7 +3,10 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:kipkirui@localhost/music' 
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://qyunky:Lewis860@localhost/music' 
+    TRACK_BASE_URL = "https://genius.p.rapidapi.com/artists/16775/songs"
 
 class prodConfig(Config):
     '''

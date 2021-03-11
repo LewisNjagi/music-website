@@ -7,3 +7,9 @@ python3.8 manage.py server
 # Registered to	mungai-joel
 # http://ws.audioscrobbler.com/2.0
 # http://www.last.fm/api/auth/?api_key=xxx
+export MAIL_USERNAME='gideonkipkirui95@gmail.com'
+export MAIL_PASSWORD='34281475'
+export SECRET_KEY='kipkirui'
+
+python3.8 manage.py server
+
