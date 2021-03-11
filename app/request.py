@@ -50,7 +50,6 @@ def search():
 
     search_response = requests.get(search_url, headers=headers, params=querystring)
 
-    
 
     return search_response.json()
 
