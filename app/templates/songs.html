@@ -1,0 +1,20 @@
+{% extends 'bootstrap/base.html'%}
+
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="card-columns">
+            {% for playlist in playlist %}
+            <div class="card" style="width: 18rem; margin-left: 130px;">
+                <h1>{{ playlist.name }}</h1>
+                
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+{%endblock%}

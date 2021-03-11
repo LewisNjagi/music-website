@@ -23,6 +23,40 @@ def get_playlist():
 
 def get_track():
 
+
+    get_track_url = "https://genius.p.rapidapi.com/artists/16775/songs"
+    
+
+#     playlist = playlist_response.json()
+#     playlist_results = None
+
+#     if playlist_results['songs']:
+
+#         playlist_results_list = track_response['songs']
+#         playlist_results = process_playlist(playlist_results_list)
+    
+#     print(playlist)
+
+    
+
+# def process_playlist(playlist):
+
+#     playlist_results = []
+#     for playlist_item in playlist:
+#         id = playlist_item.get('id')
+#         name = playlist_item.get("name")
+
+#         if name:
+#             playlist_object = Playlist(id,name)
+#             playlist_results.append(playlist_object)
+           
+
+#             return playlist_results
+
+
+
+def get_track():
+
     get_track_url = "https://genius.p.rapidapi.com/artists/16775/songs"
     
 
