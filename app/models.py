@@ -36,3 +36,22 @@ class Track:
         self.image_url = image_url
         self.name = name
         self.url = url
+
+# class Album:
+#     def __init__(self,cover):
+#         self.cover = cover
+
+class Playlist:
+    def __init__(self,id,name):
+
+        self.id = id
+        self.name = name
+class Subscriber(db.Model):
+    __tablename__ = 'subscriber'
+
+    id = db.Column(db.Integer,primary_key = True)
+    username = db.Column(db.String(255))
+    email = db.Column(db.String(255),unique = True,index = True)
+
+    def __repr__(self):
+        return f'Subscriber {self.username}'     

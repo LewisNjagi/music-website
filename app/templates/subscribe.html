@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <br>
+      <hr> <br>
+
+      <div class="col-md-3"></div>
+
+      <div class="col-md-6" style="font-family: 'Spartan', sans-serif;">
+        <h1 style="font-family: 'Spartan', sans-serif; text-align: center; margin-top: 30px;">SUBSCRIBE</h1>
+        
+        {{ wtf.quick_form(subscribe_form) }}
+      </div>
+
+      <div class="col-md-3">
+
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+{% endblock %}

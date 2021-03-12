@@ -1,4 +1,4 @@
-#!/home/qyunky/Documents/music-website/virtual/bin/python
+#!/home/moringa/Desktop/music-website/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

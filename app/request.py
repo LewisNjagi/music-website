@@ -5,27 +5,9 @@ from .models import Track
 def configure_request(app):
     pass
 
-# def get_playlist():
-
-#     get_playlist_url = "https://unsa-unofficial-spotify-api.p.rapidapi.com/playlist"
-
-#     querystring = {"id":"2IbZGv306zaldI0lap578G","start":"0","limit":"50"}
-
-#     headers = {
-#         'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
-#         'x-rapidapi-host': "unsa-unofficial-spotify-api.p.rapidapi.com"
-#         }
-
-#     playlist_response = requests.get(get_playlist_url, headers=headers, params=querystring)
-
-#     playlist = playlist_response.json()
-
-#     return print(playlist)
-
 def get_track():
 
     get_track_url = "https://genius.p.rapidapi.com/artists/16775/songs"
-    
 
     headers = {
         'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
@@ -54,6 +36,7 @@ def process_tracks(track_list):
         image_url = track_item.get('primary_artist').get('image_url')
         name = track_item.get('primary_artist').get('name')
         url = track_item.get('primary_artist').get('url')
+        cover = track_item.get('cover')
 
         if song_art_image_thumbnail_url:
             track_object = Track(id,song_art_image_thumbnail_url,image_url,name,url)
@@ -62,37 +45,32 @@ def process_tracks(track_list):
     return track_results
 
 
-
-# def search():
-
-#     search_url = "https://genius.p.rapidapi.com/search"
-
-#     querystring = {"q":"Kendrick Lamar"}
-
-#     headers = {
-#         'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
-#         'x-rapidapi-host': "genius.p.rapidapi.com"
-#         }
-
-#     search_response = requests.get(search_url, headers=headers, params=querystring)
-
+# def albums():
     
+#     url = 'https://api.happi.dev/v1/music/artists/120/albums?apikey=d6a945O7Im1cINbOASSSN2z8UPQFdNQLUSw6PjqzGcYPHr2rh16326nJ'
 
-#     return search_response.json()
+#     album_response = requests.get(url).json()
 
-# def playlist():
-    
-#     get_track_url = "https://genius.p.rapidapi.com/songs/100"
-    
+#     album_results = None
 
-#     headers = {
-#         'x-rapidapi-key': "66b57c6964msh8f34cedfde351fbp1c4ea2jsnae1dba8d4f0d",
-#         'x-rapidapi-host': "genius.p.rapidapi.com"
-#         }
+#     if album_response['results']['albums']:
 
-#     track_response = requests.get(get_track_url, headers=headers).json()
+#         album_results_list = album_response['results']['albums']
+#         album_results = process_album(album_results_list)
+        
+#         return album_results
 
-#     print(track_response)
+# def process_album(album_list):
+
+#     album_results = []
+#     for album_item in album_list:
+#         cover = track_item.get('cover')
+
+#         if cover:
+#             album_object = Album(cover)
+#             album_results.append(album_object)
+
+#     return album_results
 
 
 # get_track()
