@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+</div>
+<div class="container">
+    <div class="row">
+        <div class="card-columns">
+            {% for track in track %}
+            <div class="card" style=" margin-left: 80px; border: none;">
+                <!-- <img src="{{ artists.image_url }}" class="card-img-top" alt="..."> -->
+                <div class="pass">
+                    <img class="card-img-top passport" src="{{ album.cover }}" alt="">
+                </div>
+                <!-- <div class="card-body">
+                    <a href="{{ artists.url }}" style="color: inherit; text-decoration: none;"><h4 class="card-text" >{{ artists.name }}</h4></a>
+                </div> -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

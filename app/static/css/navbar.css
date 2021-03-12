@@ -1,0 +1,27 @@
+.navbar-nav li {
+  padding-left: 20px;
+}
+.navbar-nav a {
+  color: black;
+  margin-left: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.navbar-nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  background: #360086;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navbar-nav a:hover:after {
+  width: 100%;
+  left: 0;
+}

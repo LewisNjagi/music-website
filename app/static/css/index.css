@@ -1,21 +1,58 @@
+* {
+  /* background-color: rgb(70, 70, 70); */
+  overflow-x: hidden;
+}
 .image {
-    width: 100%;
+  width: 100%;
 }
 .head {
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Arvo', serif;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Arvo", serif;
 }
 .text {
-    font-size: 24px;
-    font-family: 'Libre Franklin', sans-serif;
+  font-size: 24px;
+  font-family: "Libre Franklin", sans-serif;
 }
-.navbar-custom { 
-    background-color: #a8acd2 !important; 
+.navbar-custom {
+  background-color: #a8acd2 !important;
 }
 .navbar-nav a {
-    color: black;
+  color: black;
 }
 .pom li {
-    line-height: 40px;
+  line-height: 40px;
+}
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-left: 20px;  
+  /* box-shadow: 0 0 20px #000000; */
+}
+.sidebar a {
+  padding: 10px 8px 6px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #818181; */
+  display: block;
+}
+
+/* .sidebar a:hover {
+  color: #f1f1f1;
+} */
+.pass {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.passport {
+  width: 100%;
+  height: auto;
 }

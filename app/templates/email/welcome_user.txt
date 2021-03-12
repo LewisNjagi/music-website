@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Subscription Successfull!
+keep in touch for updates on new posts.
